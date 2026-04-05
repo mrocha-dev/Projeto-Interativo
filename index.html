@@ -49,7 +49,9 @@ button:hover {
 </div>
 
 <script>
-
+    
+let nome = "Mishel Rocha";
+    
 function iniciar() {
     document.getElementById("app").innerHTML = `
         <h2>Analisando perfil...</h2>
@@ -63,7 +65,7 @@ function iniciar() {
 function resultado() {
     document.getElementById("app").innerHTML = `
         <h2>✅ Resultado da Avaliação</h2>
-        <p><strong>Candidato:</strong> Mishel Rocha</p>
+        <p><strong>Candidato:</strong> ${nome}</p>
 
         <p><strong>Skills:</strong></p>
         <ul style="list-style:none;">
@@ -76,11 +78,15 @@ function resultado() {
         <p><strong>Status:</strong> Em evolução constante 🚀</p>
 
         <button onclick="mostrarGitHub()">Ver GitHub</button>
+
+        <p style="margin-top:20px; font-size:14px; color:gray;">
+        Projeto desenvolvido com HTML, CSS e JavaScript puro, focado em manipulação do DOM e experiência do usuário.
+        </p>
     `;
 }
 
 function mostrarGitHub() {
-    window.open("https://github.com/", "_blank");
+    window.open("https://github.com/mrocha-dev", "_blank");
 }
 
 </script>
