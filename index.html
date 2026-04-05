@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Processo Seletivo</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    background: #111827;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #3b82f6;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2563eb;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="app">
+    <h1>🚀 Processo Seletivo</h1>
+    <p>Simulação de avaliação de candidato</p>
+    <button onclick="iniciar()">Iniciar Avaliação</button>
+</div>
+
+<script>
+
+function iniciar() {
+    document.getElementById("app").innerHTML = `
+        <h2>Analisando perfil...</h2>
+        <p>Aguarde enquanto avaliamos suas competências</p>
+        <div id="loading">⏳</div>
+    `;
+
+    setTimeout(resultado, 2500);
+}
+
+function resultado() {
+    document.getElementById("app").innerHTML = `
+        <h2>✅ Resultado da Avaliação</h2>
+        <p><strong>Candidato:</strong> Mishel Rocha</p>
+
+        <p><strong>Skills:</strong></p>
+        <ul style="list-style:none;">
+            <li>✔ JavaScript</li>
+            <li>✔ Python</li>
+            <li>✔ SQL</li>
+            <li>✔ Desenvolvimento de APIs</li>
+        </ul>
+
+        <p><strong>Status:</strong> Em evolução constante 🚀</p>
+
+        <button onclick="mostrarGitHub()">Ver GitHub</button>
+    `;
+}
+
+function mostrarGitHub() {
+    window.open("https://github.com/", "_blank");
+}
+
+</script>
+
+</body>
+</html>
